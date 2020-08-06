@@ -30,7 +30,7 @@ public class BulkInsertScheduleDataSettingParam {
     @Column
     private String insertTo;
     
-    @Column
+    @Column 
     private String insertToDesc;
     
     @Column
