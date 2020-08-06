@@ -62,7 +62,7 @@ public class ScheduledTasks {
         List<BulkInsertScheduleDataSettingParam> paramList = new ArrayList<>();
         try {
 
-            paramList = bi.findAll();
+            paramList = bi.findAllByOrderByOrderIdx();
 
             for (BulkInsertScheduleDataSettingParam bid : paramList) {
                 if (bid.getExecute()) {

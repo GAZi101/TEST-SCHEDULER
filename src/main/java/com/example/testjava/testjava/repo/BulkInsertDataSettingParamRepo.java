@@ -6,6 +6,7 @@
 package com.example.testjava.testjava.repo;
 
 import com.example.testjava.testjava.model.BulkInsertScheduleDataSettingParam;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
@@ -15,7 +16,9 @@ import org.springframework.stereotype.Repository;
  * @author PT. TRI DAYA ASIRA
  */
 @Repository
-public interface BulkInsertDataSettingParamRepo extends JpaRepository<BulkInsertScheduleDataSettingParam, String>, QuerydslPredicateExecutor<BulkInsertScheduleDataSettingParam> {
+public interface BulkInsertDataSettingParamRepo extends JpaRepository<BulkInsertScheduleDataSettingParam, String>, 
+        QuerydslPredicateExecutor<BulkInsertScheduleDataSettingParam> {
     
+    public List<BulkInsertScheduleDataSettingParam> findAllByOrderByOrderIdx();
     
 }

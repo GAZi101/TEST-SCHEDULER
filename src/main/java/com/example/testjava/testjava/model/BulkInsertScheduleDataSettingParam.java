@@ -28,10 +28,10 @@ public class BulkInsertScheduleDataSettingParam {
     private Long orderIdx;
     
     @Column
-    private String insertTo;
+    private String insertName;
     
     @Column 
-    private String insertToDesc;
+    private String insertNameDesc;
     
     @Column
     private String folder;
