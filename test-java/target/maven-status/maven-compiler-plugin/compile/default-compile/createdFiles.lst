@@ -1,0 +1,15 @@
+com\example\testjava\testjava\model\QSiswa.class
+com\example\testjava\testjava\model\QRaport.class
+com\example\testjava\testjava\model\Siswa.class
+com\example\testjava\testjava\TestJavaApplication$WebConfig.class
+com\example\testjava\testjava\model\Qnilai.class
+com\example\testjava\testjava\controller\RaportSiswaNilaiController.class
+com\example\testjava\testjava\services\SiswaService.class
+com\example\testjava\testjava\model\nilai.class
+com\example\testjava\testjava\model\Raport.class
+com\example\testjava\testjava\parserer\CsvParserer.class
+com\example\testjava\testjava\services\NilaiService.class
+com\example\testjava\testjava\repo\NilaiRepo.class
+com\example\testjava\testjava\repo\SiswaRepo.class
+com\example\testjava\testjava\TestJavaApplication.class
+com\example\testjava\testjava\scheduler\ScheduledTasks.class
