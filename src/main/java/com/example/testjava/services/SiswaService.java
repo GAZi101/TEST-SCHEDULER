@@ -6,10 +6,10 @@
 package com.example.testjava.services;
 
 import com.example.testjava.dto.RaportDto;
-import com.example.testjava.testjava.model.QSiswa;
-import com.example.testjava.testjava.model.QNilaiEntity;
 import com.example.testjava.model.Siswa;
 import com.example.testjava.model.NilaiEntity;
+import com.example.testjava.model.QNilaiEntity;
+import com.example.testjava.model.QSiswa;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.jpa.impl.JPAQuery;
 import java.util.ArrayList;

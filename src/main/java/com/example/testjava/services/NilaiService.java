@@ -5,9 +5,8 @@
  */
 package com.example.testjava.services;
 
-import com.example.testjava.testjava.model.QSiswa;
 import com.example.testjava.model.NilaiEntity;
-import com.example.testjava.testjava.model.QNilaiEntity;
+import com.example.testjava.model.QNilaiEntity;
 import com.example.testjava.repo.NilaiRepo;
 import com.querydsl.jpa.impl.JPAQuery;
 import java.util.ArrayList;
