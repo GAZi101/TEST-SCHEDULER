@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.testjava.testjava.controller;
+package com.example.testjava.controller;
 
-import com.example.testjava.testjava.services.NilaiService;
-import com.example.testjava.testjava.services.SiswaService;
+import com.example.testjava.services.NilaiService;
+import com.example.testjava.services.SiswaService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

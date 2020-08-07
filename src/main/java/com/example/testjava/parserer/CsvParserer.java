@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.testjava.testjava.parserer;
+package com.example.testjava.parserer;
 
 import com.opencsv.CSVReader;
 import java.io.Reader;

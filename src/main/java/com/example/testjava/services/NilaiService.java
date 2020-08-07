@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.testjava.testjava.services;
+package com.example.testjava.services;
 
 import com.example.testjava.testjava.model.QSiswa;
-import com.example.testjava.testjava.model.NilaiEntity;
+import com.example.testjava.model.NilaiEntity;
 import com.example.testjava.testjava.model.QNilaiEntity;
-import com.example.testjava.testjava.repo.NilaiRepo;
+import com.example.testjava.repo.NilaiRepo;
 import com.querydsl.jpa.impl.JPAQuery;
 import java.util.ArrayList;
 import java.util.List;

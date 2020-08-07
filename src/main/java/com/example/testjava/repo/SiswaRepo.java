@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.testjava.testjava.repo;
+package com.example.testjava.repo;
 
-import com.example.testjava.testjava.model.Siswa;
+import com.example.testjava.model.Siswa;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

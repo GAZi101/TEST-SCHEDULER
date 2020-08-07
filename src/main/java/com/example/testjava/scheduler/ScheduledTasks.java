@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.testjava.testjava.scheduler;
+package com.example.testjava.scheduler;
 
-import com.example.testjava.testjava.model.BulkInsertScheduleDataSettingParam;
-import com.example.testjava.testjava.model.Siswa;
-import com.example.testjava.testjava.model.NilaiEntity;
-import com.example.testjava.testjava.parserer.CsvParserer;
-import com.example.testjava.testjava.repo.BulkInsertDataSettingParamRepo;
-import com.example.testjava.testjava.repo.NilaiRepo;
-import com.example.testjava.testjava.repo.ParameterRepo;
-import com.example.testjava.testjava.repo.SiswaRepo;
+import com.example.testjava.job.BulkInsertJob;
+import com.example.testjava.model.BulkInsertScheduleDataSettingParam;
+import com.example.testjava.model.Siswa;
+import com.example.testjava.model.NilaiEntity;
+import com.example.testjava.parserer.CsvParserer;
+import com.example.testjava.repo.BulkInsertDataSettingParamRepo;
+import com.example.testjava.repo.NilaiRepo;
+import com.example.testjava.repo.ParameterRepo;
+import com.example.testjava.repo.SiswaRepo;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -49,6 +50,9 @@ public class ScheduledTasks {
 
     @Autowired
     private BulkInsertDataSettingParamRepo bi;
+    
+    @Autowired
+    private BulkInsertJob bijo;
 
     private static final Logger log = LoggerFactory.getLogger(ScheduledTasks.class);
 
@@ -56,9 +60,7 @@ public class ScheduledTasks {
 
     @Scheduled(cron = "${cronparam}")
     public void reportCurrentTime() {
-        CsvParserer cp = new CsvParserer();
-        Siswa s = new Siswa();
-        NilaiEntity n = new NilaiEntity();
+        
         List<BulkInsertScheduleDataSettingParam> paramList = new ArrayList<>();
         try {
 

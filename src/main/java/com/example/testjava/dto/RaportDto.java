@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.testjava.testjava.dto;
+package com.example.testjava.dto;
 
-import com.example.testjava.testjava.model.NilaiEntity;
+import com.example.testjava.model.NilaiEntity;
 import java.util.List;
 import lombok.Data;
 
