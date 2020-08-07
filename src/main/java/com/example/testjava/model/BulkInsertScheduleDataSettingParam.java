@@ -34,10 +34,16 @@ public class BulkInsertScheduleDataSettingParam {
     private String insertNameDesc;
     
     @Column
-    private String folder;
+    private String tableName;
     
     @Column
-    private String file;
+    private String columnsName;
+    
+    @Column
+    private Integer numbersOfColumn;
+    
+    @Column
+    private String filePath;
     
     @Column
     private Boolean execute;

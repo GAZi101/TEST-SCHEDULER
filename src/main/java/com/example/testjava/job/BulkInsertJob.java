@@ -10,26 +10,43 @@ import com.example.testjava.model.Siswa;
 import com.example.testjava.parserer.CsvParserer;
 import java.io.Reader;
 import java.nio.file.Path;
+import javax.persistence.EntityManager;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
  * @author PT. TRI DAYA ASIRA
  */
 public class BulkInsertJob {
-    
-    protected String folder;
-    protected String fileName;
+
+    protected String stringFilePath;
     protected CsvParserer cp;
     protected Reader reader;
     protected Path filePath;
+    protected String tableName;
+    protected String columnsName;
+    private Integer numbersOfColumn;
+    private String columnsParam;
 
-    public BulkInsertJob(String folder, String fileName) {
-        this.folder = folder;
-        this.fileName = fileName;
-        
+    @Autowired
+    private EntityManager em;
+
+    public BulkInsertJob(String stringFilePath, String tableName, String columnsName, Integer numbersOfColumn) {
+        this.stringFilePath = stringFilePath;
+        this.tableName = tableName;
+        this.columnsName = columnsName;
+        this.numbersOfColumn = numbersOfColumn;
     }
-    
-    protected void doBulkInsert(){
-        
+
+    protected void doBulkInsert() {
+        StringBuilder sb = new StringBuilder();
+        int i = 0;
+        while (i < numbersOfColumn) {
+            sb = sb.append("?,");
+            i++;
+        }
+        columnsParam = sb.toString().substring(0, sb.toString().length() - 1);
+
+            em.createNativeQuery("insert into " + tableName + " (" + columnsName + ") value(" + columnsParam + ")").setParameter(stringFilePath, i);
     }
 }
