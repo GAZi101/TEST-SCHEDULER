@@ -16,7 +16,7 @@ import lombok.Data;
 @Data
 public class RaportDto {
     
-    private String id;
+    private String id ;
     private String nama;
     private String mataPelajaran;
     private Integer nilai;
